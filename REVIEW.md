@@ -11,3 +11,5 @@ List every defect you found in the starter `app/main.py` (helpers and endpoints)
 |5|`list_employees` endpoint|The endpoint counted all documents in the employees collection instead of counting only employees belonging to the requested department.|Discovered the issue while testing the endpoint. For example, when the Sales department had only 2 employees, the endpoint returned a total count of 9 because it counted employees across all departments.|Added a department filter to the document-counting query so that the total reflects only employees belonging to the requested department.|
 
 Also note anything you looked at and decided was **not** a defect, and why.
+
+* I initially thought the date handling was incorrect when I examined the sample data. To verify my assumption, I checked how the dates were being saved and wrote a small piece of code to understand the behavior. After investigating, I realized the issue was my own misunderstanding of how the dates were handled.
